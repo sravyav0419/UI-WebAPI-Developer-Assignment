@@ -18,6 +18,59 @@ Transaction of $120 → (2 * $20) + (1 * $50) = 90 points
 **API Endpoint: GET /api/rewards**
 Returns the monthly and total reward points earned per customer.
 
+
+## Tech Stack
+
+- Java 17+
+- Spring Boot 3.2.x
+- Maven
+- REST API
+- Postman Collection for Testing
+
+---
+
+**Prerequisites**
+
+Ensure the following tools are installed on your system:
+
+- Java 17+
+- Maven
+- Git
+
+**#API Base URL**
+
+```
+http://localhost:8080/api/rewards
+```
+
+**GET `/api/rewards`**
+
+Fetches reward points for all customers, grouped by month and with a total.
+
+**Response Sample**
+
+```json
+[
+  {
+    "customerId": "C001",
+    "monthlyPoints": {
+      "Mar 2025": 115,
+      "Apr 2025": 250
+    },
+    "totalPoints": 365
+  },
+  {
+    "customerId": "C002",
+    "monthlyPoints": {
+      "Mar 2025": 45,
+      "May 2025": 110
+    },
+    "totalPoints": 155
+  }
+]
+```
+
+---
 **Sample Response**
 [
   {
@@ -37,3 +90,5 @@ Returns the monthly and total reward points earned per customer.
     "totalPoints": 155
   }
 ]
+
+---
