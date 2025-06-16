@@ -14,3 +14,26 @@ Customers earn points according to the following rule:
 
 **Example:**
 Transaction of $120 → (2 * $20) + (1 * $50) = 90 points
+
+**API Endpoint: GET /api/rewards**
+Returns the monthly and total reward points earned per customer.
+
+**Sample Response**
+[
+  {
+    "customerId": "C001",
+    "monthlyPoints": {
+      "Mar 2025": 115,
+      "Apr 2025": 250
+    },
+    "totalPoints": 365
+  },
+  {
+    "customerId": "C002",
+    "monthlyPoints": {
+      "Mar 2025": 45,
+      "May 2025": 110
+    },
+    "totalPoints": 155
+  }
+]
